@@ -1,0 +1,36 @@
+
+package project_euler_prob2;
+
+/**
+ *
+ * @author Jeevan Chana (ProEu: jeevan_chana)
+ */
+public class Project_euler_prob2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         
+        int sum = 0;
+        int Un;
+        int U_2 = 0; //Un-2
+        int U_1 = 1; //Un-1
+        
+        while(sum < 4000000)
+        {
+            Un = U_1;
+            U_1 = U_2 + U_1;
+            U_2 = Un;
+            
+            
+            if(U_1 % 2 == 0)
+            {
+                sum = sum + U_1;
+            }
+            
+        }
+        System.out.println("Sum= " + sum);
+    }
+    
+}
